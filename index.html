@@ -8,6 +8,219 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<style>
+    .title{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.hello{
+   text-align: center;
+   height: 60px;
+   font-size: 40px; 
+   margin-bottom: 60px;
+}
+.inner{
+    width: 1200px;
+    margin: auto;
+}
+.food{
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+.food>p{
+    display: block;
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 1px #333;
+}
+.food>p::before{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 20px;
+    position: absolute;
+    background-color: rgb(68, 68, 68);
+    top: 60%;
+    z-index: -1;
+}
+.list{
+    width: 100%;
+    padding-left: 20px;
+}
+.list1>li{
+    background-color: rgb(241, 241, 241);
+    padding: 20px 0;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+.list1>li::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .8s;
+    background-color: black;
+}
+.list1>li:hover::before{
+    animation: ani .8s forwards;
+}
+
+@keyframes ani {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.listM{
+    
+}
+.list2{
+    background-color: #333;
+    display: flex;
+    margin-bottom: 60px;
+}
+.list2>li{
+    padding: 20px;
+    color: #fff;
+}
+.song{
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+img{
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.name{
+    padding-left: 20px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.you{
+    width: 200px;
+    background-color: #ebebeb;
+    text-align: center;
+    padding: 15px 0;
+    margin-left: 20px;
+    transition: .5s;
+    margin-bottom: 50px;
+}
+.you:hover{
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(51, 51, 51, 0.178);
+}
+a{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+}
+.sing{
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+audio{
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+.like{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.tbb{
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+.tbb::before{
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: rgb(134, 134, 134);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.tbb th{
+    background-color: rgb(216, 216, 216);
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(134, 134, 134);
+}
+.tbb tr:first-child th{
+    background-color: rgb(58, 58, 58);
+    color: #fff;
+}
+.tbb tr:last-child th{
+    border-bottom: none;
+}
+.click{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.click>u{
+    cursor: pointer;
+}
+.inner2{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+.title3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+input{
+    border: none;
+    width: 400px;
+    padding-left: 15px;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-size: 18px;
+}
+input:focus{
+    outline: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: .5s;
+}
+button:hover{
+    background-color: black;
+    color: #fff;
+}
+
+</style>
 <body>
     <div class="title">Myself</div>
     <div class="hello"></div>
