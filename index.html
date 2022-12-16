@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">Myself</div>
+    <div class="hello"></div>
+    <div class="inner">
+        <div class="food">
+            <p>My Favorite Food</p>
+        </div>
+        <div class="list">
+            <ul class="list1">
+                <li>Yogurt Bowl</li>
+                <li>Dumplings</li>
+                <li>Onion Soup</li>
+                <li class="listM">Tea</li>
+                    <ul class="list2">
+                        <li>Black Tea</li>
+                        <li>Green Tea</li>
+                        <li>Coffee</li>
+                    </ul>
+            </ul>
+        </div>
+        <div class="song">Favorite Singer</div>
+        <img src=https://w.namu.la/s/941461d73c9d7ba072a745d3024d42492ba5cab3d38dfcd60acd47cd95fc8a67460c3b5261f7625bfd20a09bed291e76e5b4d6d51e0197dcf6157ee4c017a27f443bb8084b45d740bfe8b386fcbf7cb412d115bd68be86b0e171bcde134e0458a3d597d2cc0757b2f4cf137e322cf48c>
+        <div class="name"><b>L A U V</b></div>
+        <div class="you"><a href=https://www.youtube.com/watch?v=kOCkne-Bku4&ab_channel=Lauv>Lauv - Paris in the Rain</a></div>
+        <div class="sing">Favorite Song</div>
+        <audio class="mp" src="./assets/사건의 지평선.mp4" controls></audio>
+        <div class="like">Personal Information</div>
+        <table class="tbb">
+            <tr>
+            <th>Questions</th>
+            <th>Answers</th>
+            </tr>
+            <tr>
+            <th> where to live?</th>
+            <th> In your heart</th>
+            </tr>
+            <tr>
+            <th>Age?</th>
+            <th>27</th>
+            </tr>
+        </table>
+        <div class="click">Want to know how to use table? <u>click</u></div>
+        <div class="inner2">
+            <div class="title3">Contact</div>
+            <input type="text" placeholder="write..."></input>
+            <button>send</button>
+        </div>
+    </div>
+</body>
+<script>
+    const $text = document.querySelector(".hello");
+    const letters = [
+    "Hi,my name is Joy.",
+    " This is my ", 
+    "HTML Homework",
+    "I LOVE YOU"
+    ];
+
+    const speed = 100;
+    let i = 0;
+
+    const typing = async () => {  
+    const letter = letters[i].split("");
+    
+    while (letter.length) {
+        await wait(speed);
+        $text.innerHTML += letter.shift(); 
+    }
+  
+  await wait(800);
+  
+  remove();
+}
+
+const remove = async () => {
+  const letter = letters[i].split("");
+  
+  while (letter.length) {
+    await wait(speed);
+    
+    letter.pop();
+    $text.innerHTML = letter.join(""); 
+  }
+  
+  i = !letters[i+1] ? 0 : i + 1;
+  typing();
+}
+
+function wait(ms) {
+  return new Promise(res => setTimeout(res, ms))
+}
+
+setTimeout(typing, 1500);
+</script>
+</html>
